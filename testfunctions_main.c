@@ -26,3 +26,15 @@ void	main(void)
 	printf("%s\n", str);
 	printf("%s\n", pointer);
 }
+
+// ft_memcmp.c
+void	main(void)
+{
+	char	*s1 = {"Hello"};
+	char	*s2 = {"Hell!"};
+	int		returnvalue;
+
+	returnvalue = ft_memcmp(s1, s2, 5);
+	printf("%d\n", returnvalue);
+}
+
