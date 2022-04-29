@@ -15,3 +15,14 @@ void	main(void)
 	write(1, (char *)buffer, 3);
 	write(1, "\n", 1);
 }
+
+// ft_memchr.c
+void	main(void)
+{
+	char	*str = {"Hello"};
+	char	*pointer;
+
+	pointer = (char *) ft_memchr(str, 108, 6);
+	printf("%s\n", str);
+	printf("%s\n", pointer);
+}
