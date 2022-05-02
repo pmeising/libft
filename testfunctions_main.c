@@ -1,6 +1,22 @@
-// ft_mem...
+// ft_memmove.c
 
-// ft_memset
+
+
+// ft_memcpy.c
+
+void	main(void)
+{
+	const char    source[] = "Hello!";
+    char        dest[] = "BUFFER";
+	char		*pointer_to_dest;
+
+	printf("%s\n", source);
+	printf("%s\n", dest);
+	pointer_to_dest = ft_memcpy(dest, source, 4);
+	printf("%s\n", pointer_to_dest);
+}
+
+// ft_memset.c
 
 void	main(void)
 {
@@ -38,3 +54,48 @@ void	main(void)
 	printf("%d\n", returnvalue);
 }
 
+// ft_putstr_fd.c
+
+void	main(void)
+{
+	char	*s = {"Hello World!\n"};
+	int		fd;
+
+	fd = 1;
+	ft_putstr_fd(s, fd);
+}
+
+// ft_putchar_fd
+
+void	main(void)
+{
+	char	c;
+	int		fd;
+
+	fd = 1;
+	c = 'A';
+	ft_putchar_fd(c, fd);
+}
+
+// ft_putnbr_fd
+
+void	main(void)
+{
+	int	n;
+	int	fd;
+
+	fd = 1;
+	n = 0;
+	ft_putnbr_fd(n, fd);
+}
+
+// ft_putendl_fd
+
+void	main(void)
+{
+	char	*s = {"Hello World!"};
+	int		fd;
+
+	fd = 1;
+	ft_putendl_fd(s, fd);
+}

@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:53:00 by pmeising          #+#    #+#             */
-/*   Updated: 2022/04/29 17:23:07 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/02 10:15:13 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,10 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	dest = s;
 	i = 0;
-	while (i < n)
+	while (i < n && dest != '\0')
 	{
-		*dest = c;
+		*(&dest[i]) = c;
 		i++;
-		dest++;
 	}
-	dest = dest - i;
 	return (dest);
 }
