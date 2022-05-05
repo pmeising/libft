@@ -226,7 +226,7 @@ int	main(void)
 	printf("%d\n", rt);
 }
 
-// ft_strnstr
+// ft_strnstr.c
 
 int	main(void)
 {
@@ -237,4 +237,38 @@ int	main(void)
 		printf("%s\n", "Not part of the string.");
 	else
 		printf("%s\n", rt);
+}
+
+// ft_calloc.c
+
+int	main(void)
+{
+	char	*dest;
+
+	dest = ft_calloc(1, 5);
+	printf("%d\n" "%d\n", dest[2], dest[5]);
+	free(dest);
+}
+
+// ft_strdup.c
+
+int	main(void)
+{
+	char	*rt;
+
+	rt = ft_strdup("Hello pls duplicate me.");
+	printf("%s\n", rt);
+	free(rt);
+	printf("%s\n", rt);
+}
+
+// ft_itoa.c
+
+int	main(void)
+{
+	char	*rt;
+
+	rt = ft_itoa(839265);
+	printf("%s\n", rt);
+	free(rt);
 }
