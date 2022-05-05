@@ -120,3 +120,121 @@ int	main(void)
 	i = ft_atoi(s);
 	printf("%d\n", i);
 }
+
+// ft_strlen
+
+int	main(void)
+{
+	char	*s = {"Hi there"};
+	int		len;
+
+	len = ft_strlen(s);
+	printf("%d\n", len);
+}
+
+// ft_strlcpy
+
+int	main(void)
+{
+	char	dest[] = "BUFFFFF";
+	char	src[] = "Text";
+
+	char	*dest1;
+	char	*src1;
+	dest1 = &dest[0];
+	src1 = &src[0];
+	int		size;
+	int	print;
+
+	size = 4;
+	print = ft_strlcpy(dest1, src1, size);
+	printf("%d", print);
+}
+
+// ft_strtrim
+
+int	main(void)
+{
+	char	s1[] = "ABBA";
+	char	set[] = "A";
+	char	*cpy;
+
+	cpy = ft_strtrim(s1, set);
+	printf("%s\n", cpy);
+	free(cpy);
+	printf("%s\n", cpy);
+}
+
+// ft_strjoin
+
+int	main(void)
+{
+	char	s1[] = "Hello";
+	char	s2[] = " World!";
+	char	*joined;
+
+	joined = ft_strjoin(s1, s2);
+	printf("%s\n", joined);
+	free(joined);
+}
+
+// ft_substr
+
+int	main(void)
+{
+	char	s1[] = "Hi, hello!";
+	char	*substr;
+
+	substr = ft_strjoin(s1, 4, 4);
+	printf("%s\n", substr);
+	free(substr);
+}
+
+// ft_strchr
+
+int	main(void)
+{
+	char	s[] = "Hallo";
+	char	*rv;
+	int		character;
+
+	character = 'l';
+	rv = ft_strchr(s, character);
+	printf("%s", rv);
+}
+
+// ft_strrchr
+
+int	main(void)
+{
+	char	s[] = "Catarina";
+	char	*rv;
+	int		character;
+
+	character = 'a';
+	rv = ft_strrchr(s, character);
+	printf("%s", rv);
+}
+
+// ft_strncmp
+
+int	main(void)
+{
+	int	rt;
+
+	rt = ft_strncmp("Hello", "Hela", 4);
+	printf("%d\n", rt);
+}
+
+// ft_strnstr
+
+int	main(void)
+{
+	char	*rt;
+
+	rt = ft_strnstr("Hello World!", "Wo", 5);
+	if (rt[0] == '\0')
+		printf("%s\n", "Not part of the string.");
+	else
+		printf("%s\n", rt);
+}
