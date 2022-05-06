@@ -272,3 +272,20 @@ int	main(void)
 	printf("%s\n", rt);
 	free(rt);
 }
+
+// ft_split.c
+
+int	main(void)
+{
+	char	**array_of_strings;
+	int		i;
+
+	i = 0;
+	array_of_strings = ft_split("This is atestfor you.", 32);
+	while (i < 4)
+	{
+		printf("%s\n", *(array_of_strings + i));
+		i++;
+	}
+	free(array_of_strings);
+}
