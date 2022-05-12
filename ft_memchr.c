@@ -6,11 +6,11 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 17:36:42 by pmeising          #+#    #+#             */
-/*   Updated: 2022/04/29 18:35:30 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:18:09 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -29,5 +29,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		}
 		i++;
 	}
-	return ('\0');
+	return (0);
 }

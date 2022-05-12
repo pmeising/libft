@@ -6,32 +6,25 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:30:12 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/03 19:15:06 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/11 20:42:01 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 
 	i = 0;
-	while (src[i] && i < (size - 1))
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && ((i + 1) < (size)))
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	if (size > 1)
+		dest[i] = '\0';
 	return (ft_strlen(src));
 }

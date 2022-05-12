@@ -6,23 +6,11 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:17:18 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/05 19:22:58 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/10 20:07:29 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strdup(const char *s)
 {
@@ -38,5 +26,6 @@ char	*ft_strdup(const char *s)
 		dest[i] = s[i];
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }

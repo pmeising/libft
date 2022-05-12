@@ -6,11 +6,10 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 16:03:08 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/04 17:02:17 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/09 19:35:35 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)

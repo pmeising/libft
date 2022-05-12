@@ -6,13 +6,11 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 11:53:00 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/02 10:15:13 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:03:56 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
@@ -21,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	dest = s;
 	i = 0;
-	while (i < n && dest != '\0')
+	while (i < n && dest[i] != '\0')
 	{
 		*(&dest[i]) = c;
 		i++;

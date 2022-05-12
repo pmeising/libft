@@ -6,12 +6,11 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 11:33:02 by pmeising          #+#    #+#             */
-/*   Updated: 2022/04/29 17:23:14 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/09 12:16:27 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

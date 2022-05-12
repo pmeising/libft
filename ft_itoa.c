@@ -6,20 +6,19 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 16:00:43 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/05 23:02:22 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/10 17:16:12 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_zero_case(int n)
 {
 	char	*str;
 
 	str = malloc(2);
-	str[n] = '0';
+	str[n] = 48;
+	str[1] = '\0';
 	return (str);
 }
 
@@ -35,6 +34,14 @@ int	ft_alen(int n, int j)
 
 char	*ft_logic(char *str, int m, int j, int i)
 {
+	if (m == -2147483648)
+	{
+		m = -214748364;
+		str[j] = (8 + 48);
+		j--;
+	}
+	if (m > -2147483648 && m < 0)
+		m = i * m;
 	while (m != 0 && j >= 0)
 	{
 		str[j] = ((char )((m % 10)) + 48);
@@ -63,7 +70,6 @@ char	*ft_itoa(int n)
 	{
 		j++;
 		i = -1;
-		m = m * i;
 	}
 	str = malloc(1 * (j + 1));
 	str[j] = '\0';
