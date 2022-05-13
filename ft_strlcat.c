@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 19:17:41 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/12 12:58:59 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/13 19:15:01 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
 	int		j;
-	size_t	len;
+	size_t	i;
+	int		dst_len;
 
-	i = 0;
-	len = ft_strlen(dst);
-	if (size <= len)
-		return (size + ft_strlen(src));
 	j = 0;
-	while (src[j] != '\0' && i < (size - 1))
+	i = 0;
+	while (i < size && dst[i] != '\0')
+		i++;
+	dst_len = i;
+	if (size == 0)
+		return (ft_strlen((char *)src));
+	if (size == i)
+		return (size + ft_strlen((char *)src));
+	while (i < size - 1 && src[j] != '\0')
 	{
 		dst[i] = src[j];
-		i++;
 		j++;
+		i++;
 	}
 	dst[i] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[j]));
+	return (dst_len + ft_strlen(src));
 }
-
-// size_t	ft_strlcat(char *dst, const char *src, size_t size)
-// {
-// 	size_t	i;
-// 	int		j;
-// 	size_t	dst_len;
-
-// 	i = 0;
-// 	j = 0;
-// 	dst_len = ft_strlen(dst);
-// 	if (size <= dst_len)
-// 		return (ft_strlen(src) + size);
-// 	while (src[j] != '\0' && i <= (size - 1))
-// 	{
-// 		dst[dst_len + i] = src[j];
-// 		i++;
-// 		j++;
-// 	}
-// 	dst[i] = '\0';
-// 	return (ft_strlen(dst) + ft_strlen(src));
-// }

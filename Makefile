@@ -33,6 +33,18 @@ SRC	=	ft_atoi	\
 			ft_tolower	\
 			ft_toupper	\
 
+B_SRC =	ft_lstnew	\
+			ft_lstadd_front	\
+			ft_lstsize	\
+			ft_lstlast	\
+			ft_lstadd_back	\
+			ft_lstdelone	\
+			ft_lstclear	\
+			ft_lstiter	\
+			ft_lstmap	\
+
+B_SRCS		= $(addsuffix .c, ${SRCBONUS})
+
 SRCS		= $(addsuffix .c, ${SRC})
 
 HEAD		= ./includes/ 
@@ -54,7 +66,7 @@ CFLAGS		= -Wall -Wextra -Werror
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	${OBJS}
-			${AR} ${NAME} ${OBJS}
+			${AR} ${NAME} ${OBJS} ${B_OBJS}
 			${RN} ${NAME}
 
 all:		$(NAME)

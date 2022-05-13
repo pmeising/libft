@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/02 09:51:40 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/13 22:54:38 by pmeising         ###   ########.fr       */
+/*   Created: 2022/05/13 23:01:09 by pmeising          #+#    #+#             */
+/*   Updated: 2022/05/13 23:45:29 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	char	c;
+	struct s_list	*newnode;
 
-	n = (int)n;
-	if (n > -2147483648 && n < 0)
-	{
-		write(fd, "-", 1);
-		n = n * -1;
-	}
-	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
-	if (n == 0)
-		write(fd, "0", 1);
-	if (n > 0 && n < 10)
-	{
-		c = n + 48;
-		write(fd, &c, 1);
-	}
-	else if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		c = n % 10 + 48;
-		write(fd, &c, 1);
-	}
+	newnode = malloc(sizeof(struct s_list));
+	newnode->content = content;
+	newnode -> next = NULL;
+	return (newnode);
 }
