@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 12:59:31 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/10 19:59:41 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/15 11:21:22 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)(&s[i]));
 		i++;
 	}
-	if (c == '\0' && s[i] == '\0')
+	if ((char)c == '\0' && s[i] == '\0')
 		return ((char *)(&s[i]));
 	return (0);
 }

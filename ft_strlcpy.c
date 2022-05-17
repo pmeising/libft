@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 15:30:12 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/11 20:42:01 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/16 10:32:47 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		dest[i] = src[i];
 		i++;
 	}
-	if (size > 1)
+	if (size >= 1)
 		dest[i] = '\0';
 	return (ft_strlen(src));
 }

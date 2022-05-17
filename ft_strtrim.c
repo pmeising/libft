@@ -6,21 +6,11 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 19:19:00 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/09 19:37:20 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/16 12:58:50 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
 
 int	ft_logic_start(char const *s1, char const *set)
 {
@@ -68,14 +58,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	int		s1_len;	
+	int		new_end;
+	int		diff;	
 	char	*dest;
 
 	i = ft_logic_start(s1, set);
-	s1_len = ft_logic_end(s1, set);
+	new_end = ft_logic_end(s1, set);
 	j = 0;
-	dest = malloc(1 * (s1_len + 1));
-	while (dest && i < s1_len)
+	diff = new_end - i;
+	if (diff < 0)
+		diff = 0;
+	dest = malloc(sizeof(char) * (diff + 1));
+	while (dest && i < new_end)
 	{
 		dest[j] = s1[i];
 		i++;

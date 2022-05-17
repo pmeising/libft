@@ -69,6 +69,8 @@ $(NAME):	${OBJS}
 			${AR} ${NAME} ${OBJS} ${B_OBJS}
 			${RN} ${NAME}
 
+bonus:		${NAME}
+
 all:		$(NAME)
 
 clean:
