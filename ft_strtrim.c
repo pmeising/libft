@@ -64,6 +64,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = ft_logic_start(s1, set);
 	new_end = ft_logic_end(s1, set);
+	if (new_end == 0)
+		return (NULL);
 	j = 0;
 	diff = new_end - i;
 	if (diff < 0)
