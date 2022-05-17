@@ -32,18 +32,17 @@ SRC	=	ft_atoi	\
 			ft_substr	\
 			ft_tolower	\
 			ft_toupper	\
-
-B_SRC =	ft_lstnew	\
+			ft_lstnew	\
 			ft_lstadd_front	\
 			ft_lstsize	\
 			ft_lstlast	\
 			ft_lstadd_back	\
-			ft_lstdelone	\
-			ft_lstclear	\
-			ft_lstiter	\
-			ft_lstmap	\
+			# ft_lstdelone	\
+			# ft_lstclear	\
+			# ft_lstiter	\
+			# ft_lstmap	\
 
-B_SRCS		= $(addsuffix .c, ${SRCBONUS})
+# B_SRCS		= $(addsuffix .c, ${SRCBONUS})
 
 SRCS		= $(addsuffix .c, ${SRC})
 
@@ -57,8 +56,7 @@ NAME		= libft.a
 
 CC			= gcc
 RM			= rm -f
-AR			= ar rc
-RN			= ranlib
+AR			= ar rcs
 
 CFLAGS		= -Wall -Wextra -Werror
 
@@ -66,15 +64,16 @@ CFLAGS		= -Wall -Wextra -Werror
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	${OBJS}
-			${AR} ${NAME} ${OBJS} ${B_OBJS}
-			${RN} ${NAME}
+			${AR} ${NAME} ${OBJS}
+			${NAME}
 
-bonus:		${NAME}
+# bonus:
+# 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 all:		$(NAME)
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${B_OBJS}
 
 fclean:		clean
 			${RM} $(NAME)

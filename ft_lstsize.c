@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 23:55:28 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/17 09:34:00 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/17 20:30:14 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
+	if (lst == NULL)
+		return (i);
 	while ((lst != NULL))
 	{
-		lst = lst-> next;
+		lst = lst->next;
 		i++;
 	}
 	return (i);
