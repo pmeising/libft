@@ -6,13 +6,13 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 16:00:43 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/10 17:16:12 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:37:56 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_zero_case(int n)
+static char	*ft_zero_case(int n)
 {
 	char	*str;
 
@@ -22,7 +22,7 @@ char	*ft_zero_case(int n)
 	return (str);
 }
 
-int	ft_alen(int n, int j)
+static int	ft_alen(int n, int j)
 {
 	while (n != 0)
 	{
@@ -32,7 +32,7 @@ int	ft_alen(int n, int j)
 	return (j);
 }
 
-char	*ft_logic(char *str, int m, int j, int i)
+static char	*ft_logic(char *str, int m, int j, int i)
 {
 	if (m == -2147483648)
 	{

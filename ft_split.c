@@ -6,13 +6,13 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 14:03:15 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/13 14:14:33 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:39:06 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_str(char const *s, char c)
+static int	ft_count_str(char const *s, char c)
 {
 	int		i;
 	int		j;

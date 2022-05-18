@@ -6,7 +6,7 @@
 #    By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 23:38:18 by pmeising          #+#    #+#              #
-#    Updated: 2022/05/18 00:05:51 by pmeising         ###   ########.fr        #
+#    Updated: 2022/05/18 10:16:21 by pmeising         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,4 +90,3 @@ fclean:		clean
 	${RM} $(NAME)
 
 re:			fclean all
-

@@ -6,77 +6,24 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 19:19:00 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/16 12:58:50 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:52:33 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_logic_start(char const *s1, char const *set)
-{
-	int	set_len;
-	int	j;
-	int	i;
-
-	i = 0;
-	set_len = ft_strlen(set);
-	while (s1[i] != '\0')
-	{
-		j = 0;
-		while (set[j] != s1[i] && j < set_len)
-			j++;
-		if (j != set_len)
-			i++;
-		else
-			break ;
-	}
-	return (i);
-}
-
-int	ft_logic_end(char const *s1, char const *set)
-{
-	int	s1_len;
-	int	set_len;
-	int	k;
-
-	set_len = ft_strlen(set);
-	s1_len = ft_strlen(s1);
-	while (s1 && s1_len >= 0)
-	{
-		k = 0;
-		while (set[k] != s1[s1_len -1] && k < set_len && s1_len >= 0)
-			k++;
-		if (k != set_len && s1_len != 0)
-			s1_len--;
-		else
-			break ;
-	}
-	return (s1_len);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	int		new_end;
-	int		diff;	
-	char	*dest;
+	int	start;
+	int	end;
 
-	i = ft_logic_start(s1, set);
-	new_end = ft_logic_end(s1, set);
-	if (new_end == 0)
-		return (NULL);
-	j = 0;
-	diff = new_end - i;
-	if (diff < 0)
-		diff = 0;
-	dest = malloc(sizeof(char) * (diff + 1));
-	while (dest && i < new_end)
-	{
-		dest[j] = s1[i];
-		i++;
-		j++;
-	}
-	dest[j] = '\0';
-	return (dest);
+	start = 0;
+	if (s1 == NULL)
+		return (0);
+	while (s1[start] != '\0' && (ft_strchr(set, s1[start])))
+		start++;
+	end = ft_strlen(s1) - 1;
+	while (end > start && (ft_strchr(set, s1[end])))
+		end--;
+	return (ft_substr(s1, start, end - start + 1));
 }

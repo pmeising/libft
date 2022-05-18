@@ -6,13 +6,13 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 21:33:50 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/03 14:58:39 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 10:35:32 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_is_negative(char *nptr, int i)
+static int	ft_is_negative(char *nptr, int i)
 {
 	if (nptr[i] == '-')
 		return (-1);
