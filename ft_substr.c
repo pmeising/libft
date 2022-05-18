@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 19:33:56 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/18 18:58:38 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 19:28:25 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,6 @@ static char	*ft_helper(unsigned int start, size_t len, size_t s_len)
 {
 	char	*substr;
 
-	if (start > s_len)
-	{
-		substr = malloc(sizeof(char) * 1);
-		if (!substr)
-			return (NULL);
-		substr[0] = '\0';
-		return (substr);
-	}
 	if (len >= s_len)
 	{
 		substr = malloc(sizeof(char) * (s_len - start + 1));
@@ -47,6 +39,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	s_len = ft_strlen(s);
 	i = 0;
+	if (start > s_len)
+	{
+		substr = malloc(sizeof(char) * 1);
+		if (!substr)
+			return (NULL);
+		substr[0] = '\0';
+		return (substr);
+	}
 	substr = ft_helper(start, len, s_len);
 	while (s[start] != '\0' && i < len && start <= s_len)
 	{	
