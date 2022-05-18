@@ -6,7 +6,7 @@
 #    By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 23:38:18 by pmeising          #+#    #+#              #
-#    Updated: 2022/05/18 10:16:21 by pmeising         ###   ########.fr        #
+#    Updated: 2022/05/18 13:17:54 by pmeising         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,12 +65,9 @@ OBJS		:= ${SRCS:.c=.o}
 
 B_OBJS		:= ${SRCBONUS:.c=.o}
 
-PARALLEL ?= -j
-
 .PHONY: bonus all clean fclean re
 
 all:		${NAME}
-					${PARALLEL} ${NAME}
 
 $(NAME):	${OBJS} ${LIBFT}
 			${AR} ${NAME} ${OBJS}
