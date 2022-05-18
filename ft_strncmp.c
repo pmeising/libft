@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 16:36:36 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/11 14:29:40 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:37:51 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
-	while (i < n)
+	while (i < n && str1 != '\0' && str2 != '\0')
 	{
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);

@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 16:56:33 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/18 10:41:28 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:39:53 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 
 	i = 0;
 	len_needle = ft_strlen(needle);
+	if (!haystack || !needle)
+		return (NULL);
 	if (len_needle == 0)
 		return ((char *)haystack);
 	if (n == 0)
