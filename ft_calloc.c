@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 18:40:33 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/09 18:59:23 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:55:50 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_calloc(size_t number, size_t size)
 
 	i = 0;
 	dest = malloc(number * size);
+	if (dest == NULL)
+		return (dest);
 	while (i < (number * size))
 	{
 		dest[i] = '\0';
