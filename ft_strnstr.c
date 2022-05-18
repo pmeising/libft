@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 16:56:33 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/18 13:53:26 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 14:15:10 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	{
 		k = i;
 		j = helperfunction(haystack, needle, n, k);
-		if (j == len_needle - 1)
+		if (j == len_needle)
 			return ((char *)&haystack[i]);
 		else
 			j = 0;
