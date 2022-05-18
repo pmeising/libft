@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 19:33:56 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/18 18:28:11 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 18:58:38 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static char	*ft_helper(unsigned int start, size_t len, size_t s_len)
 	if (start > s_len)
 	{
 		substr = malloc(sizeof(char) * 1);
+		if (!substr)
+			return (NULL);
 		substr[0] = '\0';
 		return (substr);
 	}
