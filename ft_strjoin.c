@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 19:01:55 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/18 10:39:29 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 13:11:27 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s2_len;
 	char	*joined;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	joined = malloc(1 * (s1_len + s2_len +1));
