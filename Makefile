@@ -6,7 +6,7 @@
 #    By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 23:38:18 by pmeising          #+#    #+#              #
-#    Updated: 2022/05/18 13:20:25 by pmeising         ###   ########.fr        #
+#    Updated: 2022/05/18 13:27:18 by pmeising         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -150,21 +150,21 @@ OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 .c.o: $(SRCS)
-    $(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJS)
-    $(AR) $@ $^
+	$(AR) $@ $^
 
-bonus: $(OBJS_B)
-    $(AR) $(NAME) $^
+bonus:	$(OBJS_B)
+	$(AR) $(NAME) $^
 
 all: $(NAME)
 
 clean:
-    $(RM) $(OBJS) $(OBJS_B)
+	$(RM) $(OBJS) $(OBJS_B)
 
 fclean: clean
-    $(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: clean all
 
