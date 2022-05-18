@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 19:19:00 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/18 10:52:33 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 20:12:26 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
+	int		start;
+	int		end;
+	char	*string;
 
 	start = 0;
 	if (s1 == NULL)
@@ -25,5 +26,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1) - 1;
 	while (end > start && (ft_strchr(set, s1[end])))
 		end--;
-	return (ft_substr(s1, start, end - start + 1));
+	string = ft_substr(s1, start, end - start + 1);
+	if (!string)
+		return (NULL);
+	else
+		return (string);
 }
