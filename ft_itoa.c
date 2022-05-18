@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/28 16:00:43 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/18 16:18:20 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/18 16:51:16 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char	*ft_zero_case(int n)
 
 	str = malloc(2);
 	if (str[0] == '\0')
-		return ;
+		return (NULL);
 	str[n] = 48;
 	str[1] = '\0';
 	return (str);
@@ -75,7 +75,7 @@ char	*ft_itoa(int n)
 	}
 	str = malloc(1 * (j + 1));
 	if (str[0] == '\0')
-		return ;
+		return (NULL);
 	str[j] = '\0';
 	j--;
 	str = ft_logic(str, m, j, i);
