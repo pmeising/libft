@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 19:33:56 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/19 19:13:11 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/19 19:56:26 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	char	*substr;
 
+	i = 0;
 	s_len = ft_strlen(s);
 	if (!s)
 		return (NULL);
@@ -46,8 +47,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		substr = malloc(sizeof(char) * (s_len - start + 1));
 	else
 		substr = malloc(sizeof(char) * (len + 1));
-	i = 0;
-	if (!substr)
+	if (substr == 0)
 		return (NULL);
 	while (s[start] != '\0' && i < len && start <= s_len)
 	{	
