@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:17:18 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/19 18:46:21 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:18:44 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	s_len = ft_strlen(s);
 	dest = malloc(1 * s_len + 1);
-	if (!dest)
+	if (dest == 0)
 		return (NULL);
 	while (i < s_len)
 	{
