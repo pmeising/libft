@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 19:33:56 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/19 20:34:01 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:41:22 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (!s)
 		return (NULL);
-	else if (!len || (size_t)start > s_len)
+	else if (!len || (size_t)start >= s_len)
 		return (ft_strdup(""));
 	else if (len >= s_len)
 		substr = malloc(sizeof(char) * (s_len - start + 1));
