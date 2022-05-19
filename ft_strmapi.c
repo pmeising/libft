@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/07 13:16:03 by pmeising          #+#    #+#             */
-/*   Updated: 2022/05/19 20:18:18 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/05/19 20:28:49 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int				s_len;
 	char			*new;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	s_len = ft_strlen(s);
 	new = malloc(1 * s_len + 1);
