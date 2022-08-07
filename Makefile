@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: pmeising <pmeising@student.42wolfsburg.de> +#+  +:+       +#+         #
+#    By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 23:38:18 by pmeising          #+#    #+#              #
-#    Updated: 2022/05/19 20:46:33 by pmeising         ###   ########.fr        #
+#    Updated: 2022/08/07 09:11:21 by pmeising         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,50 +17,52 @@ RM			:= rm -f
 AR			:= ar rcs
 LIBFT		:= libft.h
 
-SRCS	:=	ft_atoi.c			\
-			ft_bzero.c			\
-			ft_calloc.c			\
-			ft_isalnum.c		\
-			ft_isalpha.c		\
-			ft_isascii.c		\
-			ft_isdigit.c		\
-			ft_isprint.c		\
-			ft_itoa.c			\
-			ft_memchr.c			\
-			ft_memcmp.c			\
-			ft_memcpy.c			\
-			ft_memmove.c		\
-			ft_memset.c			\
-			ft_putchar_fd.c		\
-			ft_putendl_fd.c		\
-			ft_putnbr_fd.c		\
-			ft_putstr_fd.c		\
-			ft_split.c			\
-			ft_strchr.c			\
-			ft_strdup.c			\
-			ft_striteri.c		\
-			ft_strjoin.c		\
-			ft_strlcat.c		\
-			ft_strlcpy.c		\
-			ft_strlen.c			\
-			ft_strmapi.c		\
-			ft_strncmp.c		\
-			ft_strnstr.c		\
-			ft_strrchr.c		\
-			ft_strtrim.c		\
-			ft_substr.c			\
-			ft_tolower.c		\
-			ft_toupper.c		\
+SOURCES		:= ./sources/
 
-SRCBONUS := ft_lstnew.c			\
-			ft_lstadd_front.c	\
-			ft_lstsize.c		\
-			ft_lstlast.c		\
-			ft_lstadd_back.c	\
-			ft_lstdelone.c		\
-			ft_lstclear.c		\
-			ft_lstiter.c		\
-			ft_lstmap.c
+SRCS	:=	$(SOURCES)ft_atoi.c			\
+			$(SOURCES)ft_bzero.c			\
+			$(SOURCES)ft_calloc.c			\
+			$(SOURCES)ft_isalnum.c		\
+			$(SOURCES)ft_isalpha.c		\
+			$(SOURCES)ft_isascii.c		\
+			$(SOURCES)ft_isdigit.c		\
+			$(SOURCES)ft_isprint.c		\
+			$(SOURCES)ft_itoa.c			\
+			$(SOURCES)ft_memchr.c			\
+			$(SOURCES)ft_memcmp.c			\
+			$(SOURCES)ft_memcpy.c			\
+			$(SOURCES)ft_memmove.c		\
+			$(SOURCES)ft_memset.c			\
+			$(SOURCES)ft_putchar_fd.c		\
+			$(SOURCES)ft_putendl_fd.c		\
+			$(SOURCES)ft_putnbr_fd.c		\
+			$(SOURCES)ft_putstr_fd.c		\
+			$(SOURCES)ft_split.c			\
+			$(SOURCES)ft_strchr.c			\
+			$(SOURCES)ft_strdup.c			\
+			$(SOURCES)ft_striteri.c		\
+			$(SOURCES)ft_strjoin.c		\
+			$(SOURCES)ft_strlcat.c		\
+			$(SOURCES)ft_strlcpy.c		\
+			$(SOURCES)ft_strlen.c			\
+			$(SOURCES)ft_strmapi.c		\
+			$(SOURCES)ft_strncmp.c		\
+			$(SOURCES)ft_strnstr.c		\
+			$(SOURCES)ft_strrchr.c		\
+			$(SOURCES)ft_strtrim.c		\
+			$(SOURCES)ft_substr.c			\
+			$(SOURCES)ft_tolower.c		\
+			$(SOURCES)ft_toupper.c		\
+
+SRCBONUS := $(SOURCES)ft_lstnew.c			\
+			$(SOURCES)ft_lstadd_front.c	\
+			$(SOURCES)ft_lstsize.c		\
+			$(SOURCES)ft_lstlast.c		\
+			$(SOURCES)ft_lstadd_back.c	\
+			$(SOURCES)ft_lstdelone.c		\
+			$(SOURCES)ft_lstclear.c		\
+			$(SOURCES)ft_lstiter.c		\
+			$(SOURCES)ft_lstmap.c
 
 OBJS		:= ${SRCS:.c=.o}
 
