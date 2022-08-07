@@ -6,7 +6,7 @@
 /*   By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 18:23:59 by pmeising          #+#    #+#             */
-/*   Updated: 2022/08/07 09:25:09 by pmeising         ###   ########.fr       */
+/*   Updated: 2022/08/07 09:34:33 by pmeising         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdio.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -84,6 +85,12 @@ int		ft_len(char *remainder);
 
 // FT_PRINTF FUNCTIONS
 
-
+char	*ft_itoa_hxd(unsigned long n, char a);
+int		ft_hex_func_p(unsigned long n);
+int		ft_hex(unsigned int n, int c);
+char	*ft_itoa_u(unsigned int n);
+int		ft_putperc(void);
+int		ft_putstr(char *s);
+int		ft_printf(const char *str, ...);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: pmeising <pmeising@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 23:38:18 by pmeising          #+#    #+#              #
-#    Updated: 2022/08/07 09:23:49 by pmeising         ###   ########.fr        #
+#    Updated: 2022/08/07 09:35:31 by pmeising         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,12 @@ SRCS	:=	$(SOURCES)ft_atoi.c			\
 			$(SOURCES)ft_toupper.c		\
 			$(SOURCES)get_next_line.c	\
 			$(SOURCES)get_next_line_utils.c	\
+			$(SOURCES)ft_hex_func_p.c	\
+			$(SOURCES)ft_hex.c			\
+			$(SOURCES)ft_itoa_u.c		\
+			$(SOURCES)ft_printf.c		\
+			$(SOURCES)ft_putperc.c		\
+			$(SOURCES)ft_putstr.c		\
 
 SRCBONUS := $(SOURCES)ft_lstnew.c			\
 			$(SOURCES)ft_lstadd_front.c	\
